@@ -125,12 +125,11 @@ If you like to deploy the website to the github pages please follow the link her
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Odai Alazzeh**
-GitHub: [@odaialazzeh](https://github.com/odaialazzeh)
-Twitter: [@odaialazzeh4](https://twitter.com/odaialazzeh4)
-LinkedIn: [LinkedIn](https://www.linkedin.com/in/odai-alazzeh-01546024a/)
+- GitHub: [@odaialazzeh](https://github.com/odaialazzeh)
+- Twitter: [@odaialazzeh4](https://twitter.com/odaialazzeh4)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/odai-alazzeh-01546024a/)
 
 👤 **Sergiy Shkolnik**
-
 - GitHub: [@SergSkol](https://github.com/SergSkol)
 - Twitter: [@sps676](https://twitter.com/sps676)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/sergiy-shkolnik-7801a53/)
