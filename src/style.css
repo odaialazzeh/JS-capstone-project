@@ -1,6 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
+
 body {
-  max-width: 500px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: lightgray;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: white;
+  height: 100vh;
+  color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+}
+
+header .logo {
+  border: 2px solid black;
+  border-radius: 5em;
+  height: 4.2em;
+  width: 4.2em;
+  margin: 0 1em 0 1em;
+}
+
+header .logo h1 {
+  font-size: 1.1em;
+  text-align: center;
+  line-height: 1.2em;
+  margin-top: 0.55em;
+}
+
+header .logo h1 span {
+  text-align: center;
+  color: #d57d1f;
+}
+
+header .logo h1 span::before {
+  content: "\a";
+  white-space: pre;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+header nav ul li {
+  padding-left: 1em;
+}
+
+header nav ul #meals {
+  margin: 0 1em 0 -3.5em;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+footer {
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  width: 100%;
+  border: 3px solid black;
+}
+
+footer h2 {
+  margin-left: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
 }
