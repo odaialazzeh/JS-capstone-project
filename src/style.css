@@ -59,8 +59,8 @@ header nav ul #meals {
 }
 
 footer {
-  position: absolute;
-  bottom: -2em;
+  position: relative;
+  bottom: 0;
   left: 0;
   width: 100%;
   border: 3px solid black;
@@ -70,4 +70,65 @@ footer h2 {
   margin-left: 1em;
   font-size: 1.2em;
   font-weight: 500;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-content: center;
+  margin: 10em auto;
+  width: 20em;
+}
+
+.meal {
+  display: grid;
+  grid-template-rows: auto 20% 25%;
+  margin: 0 0 15em 0;
+  width: 20em;
+  height: 15em;
+}
+
+.meal .div-like {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+}
+
+.meal .div-like p {
+  text-align: center;
+  margin-left: 4em;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.meal .div-like .fa-heart {
+  margin-right: 2em;
+  font-size: 1.7em;
+}
+
+.div-img {
+  place-self: center;
+  margin-bottom: 1em;
+}
+
+.meal img {
+  width: 15em;
+}
+
+button {
+  text-align: center;
+  background-color: white;
+  box-shadow: 2px 2px 2px black;
+  width: 10em;
+  height: 2.5em;
+  font-weight: bold;
+  place-self: center;
+}
+
+.random h2 {
+  margin: 3em 0 -3em 0;
+  font-size: 1.7em;
+  text-align: center;
 }
