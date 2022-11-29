@@ -1,3 +1,5 @@
+import showPopupComment from './show-popup-comment.js';
+
 async function getData() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
   const data = await response.json();
@@ -36,6 +38,11 @@ async function getData() {
     list.appendChild(button);
 
     listSection.append(list);
+
+    button.addEventListener('click', (e) => {
+      const { id } = e.target;
+      showPopupComment(id);
+    });
   }
 }
 
