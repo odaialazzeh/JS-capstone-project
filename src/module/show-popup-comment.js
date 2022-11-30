@@ -46,7 +46,7 @@ async function showPopupComment(id) {
   commentsContainer.className = 'meal-popup-comments-container';
   meal.appendChild(commentsContainer);
 
-  showCommentsList(id, commentsContainer);
+  showCommentsList(id);
 
   const form = document.createElement('form');
   form.className = 'meal-popup-add-comment-form';
