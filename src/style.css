@@ -157,17 +157,56 @@ button {
   overflow-y: scroll;
   height: 100%;
   z-index: 999;
+  padding: 0 32px 0 32px;
 }
 
 .meal-popup-close-icon {
   font-size: 32px;
-  color: #67798e;
-  position: absolute;
-  top: 8px;
-  right: 12px;
+  color: black;
+  position: fixed;
+  top: 18px;
+  right: 28px;
 }
 
 .meal-popup-div-img {
   margin: 10px 50px 10px 50px;
+  text-align: center;
+}
+
+.meal-popup-add-comment-form {
+  margin: 0 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.meal-popup-add-comment-form-username {
+  margin: 0 0 10px 0;
+  width: 256px;
+}
+
+.meal-popup-add-comment-form-comment {
+  margin: 0 0 10px 0;
+  width: 256px;
+}
+
+@keyframes change-color {
+  0% {
+    color: red;
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+.meal-popup-add-comment-form-res {
+  animation-name: change-color;
+  animation-duration: 5s;
+  font-size: 16px;
+  width: 256px;
+  font-weight: 300;
+  color: transparent;
   text-align: center;
 }
