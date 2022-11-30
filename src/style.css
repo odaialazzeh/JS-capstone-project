@@ -117,7 +117,7 @@ footer h2 {
   color: red;
 }
 
-.meal .div-like .div-heart lable::before {
+.meal .div-like .div-heart label::before {
   content: "\a";
   white-space: pre;
 }
