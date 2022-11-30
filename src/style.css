@@ -93,7 +93,7 @@ footer h2 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 20em;
+  width: 17em;
 }
 
 .meal .div-like p {
@@ -103,9 +103,23 @@ footer h2 {
   font-weight: 500;
 }
 
-.meal .div-like .fa-heart {
-  margin-right: 2em;
+.meal .div-like .div-heart .fa-heart {
+  margin-right: -3em;
   font-size: 1.7em;
+  cursor: pointer;
+}
+
+.meal .div-like .div-heart .fa-heart:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.meal .div-like .div-heart .fa-heart:active {
+  color: red;
+}
+
+.meal .div-like .div-heart lable::before {
+  content: "\a";
+  white-space: pre;
 }
 
 .div-img {
@@ -125,6 +139,7 @@ button {
   height: 2.5em;
   font-weight: bold;
   place-self: center;
+  cursor: pointer;
 }
 
 .random h2 {
@@ -141,6 +156,7 @@ button {
   border: 4px solid #3e3e3e;
   overflow-y: scroll;
   height: 100%;
+  z-index: 999;
 }
 
 .meal-popup-close-icon {
