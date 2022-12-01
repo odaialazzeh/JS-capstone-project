@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/odaialazzeh/JS-capstone-project#readme",
   "devDependencies": {
     "@babel/core": "^7.20.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^29.3.1",
@@ -40,12 +41,14 @@
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.21.0",
+    "ts-jest": "^29.0.3",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "cross-fetch": "^3.1.5",
+    "jest-environment-jsdom": "^29.3.1",
     "node-fetch": "^3.3.0"
   }
 }

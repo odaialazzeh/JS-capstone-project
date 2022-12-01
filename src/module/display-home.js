@@ -1,6 +1,9 @@
 import showPopupComment from './show-popup-comment.js';
 import addLike from './add-like.js';
 import count from './count-items.js';
+import showlikes from './display-likes.js';
+
+const fetch = require('node-fetch');
 
 async function getData() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
@@ -12,10 +15,6 @@ async function getData() {
   listSection.before(header);
   listSection.before(random);
   listSection.replaceChildren();
-
-  const response1 = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tnE2k6P5BdZ2HCTjbd0V/likes');
-  const data1 = await response1.json();
-  const len = data1.length;
   for (let i = 0; i < lengthData; i += 1) {
     const list = document.createElement('div');
     list.className = 'meal';
@@ -38,6 +37,7 @@ async function getData() {
 
     const div3 = document.createElement('div');
     div3.className = 'div-heart';
+    div3.id = 'div-heart';
     div2.appendChild(div3);
 
     const like = document.createElement('i');
@@ -45,13 +45,12 @@ async function getData() {
     like.id = data.meals[i].idMeal;
     div3.appendChild(like);
 
-    for (let j = 0; j < len; j += 1) {
-      if (data1[j].item_id === data.meals[i].idMeal) {
-        const likeCount = document.createElement('label');
-        likeCount.innerHTML = `${data1[j].likes}likes`;
-        div3.appendChild(likeCount);
-      }
-    }
+    showlikes(data.meals[i].idMeal);
+
+    const likeCount = document.createElement('label');
+    likeCount.id = `id${data.meals[i].idMeal}`;
+    likeCount.innerHTML = 'likes';
+    div3.appendChild(likeCount);
 
     const button = document.createElement('button');
     button.id = data.meals[i].idMeal;
@@ -68,9 +67,12 @@ async function getData() {
     like.addEventListener('click', (e) => {
       const { id } = e.target;
       addLike(id);
+      showlikes(id);
     });
   }
-  count();
+  const parent = document.getElementById('data');
+  const counter = document.getElementById('meals');
+  counter.innerHTML = `Meals${count(parent)}`;
 }
 
 export default getData;

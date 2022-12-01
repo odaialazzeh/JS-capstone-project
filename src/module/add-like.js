@@ -1,5 +1,5 @@
 async function addLike(id) {
-  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tnE2k6P5BdZ2HCTjbd0V/likes', {
+  fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/otoY0fxXk5LjLMlhzjv8/likes', {
     method: 'POST',
     body: JSON.stringify({
       item_id: id,
