@@ -259,15 +259,15 @@ button {
   border-radius: 0.3em;
   margin-bottom: 1em;
   font-family: var(--font-family);
-  width: 12.65em;
+  width: 20em;
 }
 
 .meal-popup-add-comment-form-comment {
   padding: 0.4em;
   border: 2px solid var(--black);
   border-radius: 0.3em;
-  width: 12.7em;
-  height: 5em;
+  width: 20em;
+  height: 10em;
   margin-bottom: 1em;
   font-family: var(--font-family);
 }
