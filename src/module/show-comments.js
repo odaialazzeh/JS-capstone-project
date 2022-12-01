@@ -1,4 +1,4 @@
-async function showCommentsList(id, parent) {
+async function showCommentsList(id) {
   const apiKey = 'tnE2k6P5BdZ2HCTjbd0V';
   const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${apiKey}/comments?item_id=${id}`,
     {
@@ -11,6 +11,8 @@ async function showCommentsList(id, parent) {
   try {
     const data = await response.json();
 
+    const parent = document.querySelector('.meal-popup-comments-container');
+    parent.innerHTML = '';
     const title = document.createElement('h3');
     title.className = 'meal-popup-comments-title';
     title.innerHTML = `Comments (${data.length || 0})`;

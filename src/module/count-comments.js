@@ -1,6 +1,3 @@
-const countComments = () => {
-  const comments = document.querySelectorAll('.meal-popup-comments-row');
-  return comments.length;
-};
+const countComments = (parent) => parent.childElementCount;
 
 export default countComments;

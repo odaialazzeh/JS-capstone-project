@@ -16,10 +16,7 @@ async function addNewComment(itemId, username, comment) {
     });
   await response;
 
-  const parent = document.querySelector('.meal-popup-comments-container');
-  parent.innerHTML = '';
-
-  showCommentsList(itemId, parent);
+  showCommentsList(itemId);
 }
 
 export default addNewComment;

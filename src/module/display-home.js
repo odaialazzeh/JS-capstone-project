@@ -3,8 +3,6 @@ import addLike from './add-like.js';
 import count from './count-items.js';
 import showlikes from './display-likes.js';
 
-const fetch = require('node-fetch');
-
 async function getData() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
   const data = await response.json();
