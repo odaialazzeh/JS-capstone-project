@@ -4,8 +4,13 @@ import count from './count-items.js';
 import showlikes from './display-likes.js';
 // import displayComments from './display-comments.js';
 
-async function getData() {
-  const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
+async function getData(filter = "") {
+  let response;
+  if (filter === "") {
+    response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
+  } else {
+    response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c='+filter);
+  }
   const data = await response.json();
   const lengthData = data.meals.length;
   const header = document.querySelector('.head');

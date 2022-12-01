@@ -1,3 +1,5 @@
+import getData from './display-home.js';
+
 async function showPopupCategories() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/categories.php');
   const data = await response.json();
@@ -30,6 +32,11 @@ async function showPopupCategories() {
     const p1 = document.createElement('h2');
     p1.textContent = `${dataCat.strCategory}`;
     div.appendChild(p1);
+
+    img.addEventListener('click', (e) => {
+      getData(dataCat.strCategory);
+      cat.remove();
+    });
 
     mainSection.appendChild(cat);
   });
