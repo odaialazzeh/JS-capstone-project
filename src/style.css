@@ -66,7 +66,6 @@ header nav ul {
 
 header nav ul li {
   padding-left: 1em;
-  cursor: pointer;
 }
 
 header nav ul #meals {
@@ -260,15 +259,15 @@ button {
   border-radius: 0.3em;
   margin-bottom: 1em;
   font-family: var(--font-family);
-  width: 20em;
+  width: 12.65em;
 }
 
 .meal-popup-add-comment-form-comment {
   padding: 0.4em;
   border: 2px solid var(--black);
   border-radius: 0.3em;
-  width: 20em;
-  height: 10em;
+  width: 12.7em;
+  height: 5em;
   margin-bottom: 1em;
   font-family: var(--font-family);
 }
@@ -295,17 +294,12 @@ button {
 
 .cat-popup {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 1em;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: rgb(241, 240, 240);
   overflow-y: scroll;
-  width: 100%;
   height: 100%;
   z-index: 999;
 }
@@ -323,33 +317,31 @@ button {
   text-align: center;
 }
 
+.cat-popup-div {
+  margin: 10px 50px 10px 50px;
+  text-align: center;
+}
+
+.cat-popup-div-p {
+  font-size: 32px;
+}
+
 .cont-popup {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: rgb(241, 240, 240);
   overflow-y: scroll;
   height: 100%;
   z-index: 999;
+  padding: 0 32px 0 32px;
   width: 100%;
 }
 
-.cont-popup h2 {
-  font-size: 3em;
-}
-
 .cont-popup-div {
-  display: flex;
-  flex-direction: row;
-}
-
-.cont-popup-p {
-  margin-right: 2em;
-  font-size: 2em;
+  margin: 10px 0 0 32px;
 }
 
 .cont-popup-close-icon {
@@ -358,15 +350,6 @@ button {
   position: fixed;
   top: 18px;
   right: 28px;
-}
-
-.cat-popup-div {
-  margin: 10px 50px 10px 50px;
-  text-align: center;
-}
-
-.cat-popup-div-p {
-  font-size: 32px;
 }
 
 .Ingredients {
