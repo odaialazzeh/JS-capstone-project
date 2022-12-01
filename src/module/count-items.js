@@ -1,9 +1,3 @@
-const count = () => {
-  const box = document.getElementById('data');
-
-  const directChildren = box.children.length;
-  const counter = document.getElementById('meals');
-  counter.innerHTML = `Meals (${directChildren})`;
-};
+const count = (parent) => parent.childElementCount;
 
 export default count;

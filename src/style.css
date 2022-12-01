@@ -104,7 +104,7 @@ footer h2 {
 }
 
 .meal .div-like .div-heart .fa-heart {
-  margin-right: -3em;
+  margin-right: -1em;
   font-size: 1.7em;
   cursor: pointer;
 }
@@ -115,6 +115,10 @@ footer h2 {
 
 .meal .div-like .div-heart .fa-heart:active {
   color: red;
+}
+
+.meal .div-like .div-heart label {
+  font-size: 1em;
 }
 
 .meal .div-like .div-heart label::before {
