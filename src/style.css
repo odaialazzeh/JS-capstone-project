@@ -1,44 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap");
 
+:root {
+  --orange: #d57d1f;
+  --black: rgb(25, 42, 86, 0.9);
+  --light-color: #666;
+  --box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  --font-family: "Poppins", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: white;
   height: 100vh;
-  color: black;
+  background-color: #eee;
+  color: var(--black);
 }
 
 header {
+  margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1em;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  padding: 0.5em;
+  background-color: white;
+}
+
+.fa-cutlery {
+  color: var(--black);
+  font-size: 1.3em;
+}
+
+.meal-popup h4 span {
+  text-align: left;
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 0.3em;
 }
 
 header .logo {
-  border: 2px solid black;
-  border-radius: 5em;
-  height: 4.2em;
-  width: 4.2em;
-  margin: 0 1em 0 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 header .logo h1 {
   font-size: 1.1em;
   text-align: center;
-  line-height: 1.2em;
-  margin-top: 0.55em;
+  line-height: 1em;
+  margin: 0 1.5em 0 0.3em;
 }
 
 header .logo h1 span {
   text-align: center;
-  color: #d57d1f;
-}
-
-header .logo h1 span::before {
-  content: "\a";
-  white-space: pre;
+  color: var(--orange);
 }
 
 header nav ul {
@@ -53,8 +70,7 @@ header nav ul li {
 
 header nav ul #meals {
   margin: 0 1em 0 -3.5em;
-  text-decoration: underline;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.1em;
 }
 
@@ -73,19 +89,32 @@ footer h2 {
 }
 
 .home {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  place-content: center;
-  margin: 10em auto;
-  width: 20em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 8em 0;
+  width: 100%;
+}
+
+.meal-popup p {
+  text-align: left;
+  margin: 1em 1em;
+  line-height: 2em;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .meal {
-  display: grid;
-  grid-template-rows: auto 20% 25%;
-  margin: 0 0 15em 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 1em 5em 0;
   width: 20em;
-  height: 15em;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
 }
 
 .meal .div-like {
@@ -105,17 +134,21 @@ footer h2 {
 
 .div-heart {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: -1em;
 }
 
 .meal .div-like .div-heart .fa-heart {
-  margin-right: -1em;
+  margin-left: 1em;
   font-size: 1.7em;
   cursor: pointer;
+  color: var(--orange);
 }
 
 .meal .div-like .div-heart .fa-heart:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 165, 0, 0.7);
 }
 
 .meal .div-like .div-heart .fa-heart:active {
@@ -124,37 +157,35 @@ footer h2 {
 
 .meal .div-like .div-heart label {
   font-size: 1em;
-}
-
-.meal .div-like .div-heart label::before {
-  /* content: "\a";
-  white-space: pre; */
-}
-
-.meal .div-like .div-heart .fa-comment {
-  margin-right: -1em;
-  font-size: 1.7em;
-  cursor: pointer;
+  color: var(--black);
+  margin-left: 1em;
 }
 
 .div-img {
   place-self: center;
-  margin-bottom: 1em;
+  margin: 1em auto;
 }
 
 .meal img {
-  width: 15em;
+  width: 17em;
+  border-radius: 0.5em;
 }
 
 button {
   text-align: center;
-  background-color: white;
-  box-shadow: 2px 2px 2px black;
-  width: 10em;
+  background-color: var(--black);
+  color: white;
+  width: 8em;
   height: 2.5em;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: medium;
   place-self: center;
   cursor: pointer;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: var(--box-shadow);
 }
 
 .random h2 {
@@ -165,16 +196,30 @@ button {
 
 .meal-popup {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: white;
-  border: 4px solid #3e3e3e;
+  top: 0;
+  left: 0;
+  right: 0;
   overflow-y: scroll;
   height: 100%;
   z-index: 999;
-  padding: 0 32px 0 32px;
+  box-shadow: var(--box-shadow);
+  background-color: rgb(241, 240, 240);
 }
 
+.meal-popup h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+.meal-popup h4 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 1em 1em;
+}
+
+/*
 .meal-popup-close-icon {
   font-size: 32px;
   color: black;
@@ -182,10 +227,22 @@ button {
   top: 18px;
   right: 28px;
 }
-
+*/
 .meal-popup-div-img {
-  margin: 10px 50px 10px 50px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.meal-popup-div-img img {
+  width: 35em;
+  height: 30em;
+  border-radius: 0.5em;
+}
+
+.meal-popup-comments-title {
+  margin-left: 1em;
 }
 
 .meal-popup-add-comment-form {
@@ -197,13 +254,22 @@ button {
 }
 
 .meal-popup-add-comment-form-username {
-  margin: 0 0 10px 0;
-  width: 256px;
+  padding: 0.4em;
+  border: 2px solid var(--black);
+  border-radius: 0.3em;
+  margin-bottom: 1em;
+  font-family: var(--font-family);
+  width: 12.65em;
 }
 
 .meal-popup-add-comment-form-comment {
-  margin: 0 0 10px 0;
-  width: 256px;
+  padding: 0.4em;
+  border: 2px solid var(--black);
+  border-radius: 0.3em;
+  width: 12.7em;
+  height: 5em;
+  margin-bottom: 1em;
+  font-family: var(--font-family);
 }
 
 @keyframes change-color {
@@ -225,6 +291,7 @@ button {
   color: transparent;
   text-align: center;
 }
+
 
 .cat-popup {
   display: flex;
@@ -283,4 +350,44 @@ button {
 
 .cat-popup-div-p {
   font-size: 32px;
+}
+
+.Ingredients {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ingredients ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.Ingredients ul li {
+  padding-bottom: 5em;
+  width: 10em;
+  height: 10em;
+}
+
+.Ingredients ul li img {
+  width: 10em;
+  height: 10em;
+}
+
+.Ingredients ul li h3 {
+  text-align: center;
+}
+
+.fa-times {
+  position: fixed;
+  top: 0.2em;
+  right: 1em;
+  color: var(--black);
+  font-size: 2em;
+  cursor: pointer;
 }

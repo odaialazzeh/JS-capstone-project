@@ -92,7 +92,7 @@ async function getData() {
   }
   const parent = document.getElementById('data');
   const counter = document.getElementById('meals');
-  counter.innerHTML = `Meals${count(parent)}`;
+  counter.innerHTML = `Meals (${count(parent)})`;
 }
 
 export default getData;
