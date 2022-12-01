@@ -296,14 +296,12 @@ button {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: white;
-  border: 4px solid #3e3e3e;
+  top: 0;
+  left: 0;
+  background-color: rgb(241, 240, 240);
   overflow-y: scroll;
   height: 100%;
   z-index: 999;
-  padding: 0 32px 0 32px;
 }
 
 .cat-popup-close-icon {
@@ -319,19 +317,31 @@ button {
   text-align: center;
 }
 
+.cat-popup-div {
+  margin: 10px 50px 10px 50px;
+  text-align: center;
+}
+
+.cat-popup-div-p {
+  font-size: 32px;
+}
+
 .cont-popup {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background-color: white;
-  border: 4px solid #3e3e3e;
+  top: 0;
+  left: 0;
+  background-color: rgb(241, 240, 240);
   overflow-y: scroll;
   height: 100%;
   z-index: 999;
   padding: 0 32px 0 32px;
   width: 100%;
+}
+
+.cont-popup-div {
+  margin: 10px 0 0 32px;
 }
 
 .cont-popup-close-icon {
@@ -340,15 +350,6 @@ button {
   position: fixed;
   top: 18px;
   right: 28px;
-}
-
-.cat-popup-div {
-  margin: 10px 50px 10px 50px;
-  text-align: center;
-}
-
-.cat-popup-div-p {
-  font-size: 32px;
 }
 
 .Ingredients {
