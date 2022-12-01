@@ -44,6 +44,7 @@ header .logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 header .logo h1 {
@@ -66,6 +67,7 @@ header nav ul {
 
 header nav ul li {
   padding-left: 1em;
+  cursor: pointer;
 }
 
 header nav ul #meals {
@@ -75,11 +77,15 @@ header nav ul #meals {
 }
 
 footer {
+  display: flex;
+  place-items: center;
   position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
-  border: 3px solid black;
+  background-color: white;
+  height: 5em;
+  box-shadow: var(--box-shadow);
 }
 
 footer h2 {
@@ -98,6 +104,11 @@ footer h2 {
   width: 100%;
 }
 
+.cont-popup p {
+  margin-right: 2em;
+  font-size: 1.2em;
+}
+
 .meal-popup p {
   text-align: left;
   margin: 1em 1em;
@@ -107,11 +118,11 @@ footer h2 {
 }
 
 .meal {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 25% 25%;
   margin: 0 1em 5em 0;
   width: 20em;
-  height: 100%;
+  height: 33em;
   background-color: white;
   border-radius: 0.5em;
   box-shadow: var(--box-shadow);
@@ -120,14 +131,15 @@ footer h2 {
 .meal .div-like {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  width: 17em;
+  justify-content: space-between;
+  margin: auto 0;
+  width: 100%;
 }
 
 .meal .div-like p {
-  text-align: center;
-  margin-left: 4em;
+  text-align: left;
+  margin-left: 1em;
   font-size: 1.2em;
   font-weight: 500;
 }
@@ -137,7 +149,7 @@ footer h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: -1em;
+  width: 10em;
 }
 
 .meal .div-like .div-heart .fa-heart {
@@ -158,7 +170,7 @@ footer h2 {
 .meal .div-like .div-heart label {
   font-size: 1em;
   color: var(--black);
-  margin-left: 1em;
+  margin-left: 1.2em;
 }
 
 .div-img {
@@ -182,7 +194,7 @@ button {
   font-size: medium;
   place-self: center;
   cursor: pointer;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   border: none;
   border-radius: 0.5em;
   box-shadow: var(--box-shadow);
@@ -259,15 +271,15 @@ button {
   border-radius: 0.3em;
   margin-bottom: 1em;
   font-family: var(--font-family);
-  width: 12.65em;
+  width: 20em;
 }
 
 .meal-popup-add-comment-form-comment {
   padding: 0.4em;
   border: 2px solid var(--black);
   border-radius: 0.3em;
-  width: 12.7em;
-  height: 5em;
+  width: 20em;
+  height: 8em;
   margin-bottom: 1em;
   font-family: var(--font-family);
 }
@@ -295,9 +307,13 @@ button {
 .cat-popup {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   background-color: rgb(241, 240, 240);
   overflow-y: scroll;
   height: 100%;
@@ -312,9 +328,10 @@ button {
   right: 28px;
 }
 
-.cat-popup-div-img {
+.cat-popup-div img {
   margin: 10px 50px 10px 50px;
   text-align: center;
+  cursor: pointer;
 }
 
 .cat-popup-div {
@@ -328,6 +345,9 @@ button {
 
 .cont-popup {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   position: fixed;
   top: 0;
@@ -340,8 +360,14 @@ button {
   width: 100%;
 }
 
+.cont-popup h2 {
+  margin-top: 2em;
+  font-size: 2em;
+}
+
 .cont-popup-div {
-  margin: 10px 0 0 32px;
+  display: flex;
+  flex-direction: row;
 }
 
 .cont-popup-close-icon {
