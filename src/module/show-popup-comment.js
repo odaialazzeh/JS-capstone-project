@@ -37,9 +37,8 @@ async function showPopupComment(id) {
   IngredientsDiv.appendChild(Ingredients);
 
   for (let i = 9; i < 29; i += 1) {
-    const key = Object.values(data.meals[0])[i];
     const value = Object.values(data.meals[0])[i];
-    if (key !== '') {
+    if (value !== '') {
       const IngredientsItems1 = document.createElement('li');
       Ingredients.appendChild(IngredientsItems1);
 
