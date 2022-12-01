@@ -12,7 +12,7 @@ async function showlikes(id) {
     const likeCount = document.getElementById(`id${id}`);
     data.map((like) => {
       if (like.item_id === id) {
-        likeCount.textContent = `${like.likes} likes`;
+        likeCount.textContent = `${like.likes}`;
       }
       return true;
     });

@@ -103,6 +103,11 @@ footer h2 {
   font-weight: 500;
 }
 
+.div-heart {
+  display: flex;
+  gap: 30px;
+}
+
 .meal .div-like .div-heart .fa-heart {
   margin-right: -1em;
   font-size: 1.7em;
@@ -122,8 +127,14 @@ footer h2 {
 }
 
 .meal .div-like .div-heart label::before {
-  content: "\a";
-  white-space: pre;
+  /* content: "\a";
+  white-space: pre; */
+}
+
+.meal .div-like .div-heart .fa-comment {
+  margin-right: -1em;
+  font-size: 1.7em;
+  cursor: pointer;
 }
 
 .div-img {
