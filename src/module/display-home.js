@@ -2,6 +2,7 @@ import showPopupComment from './show-popup-comment.js';
 import addLike from './add-like.js';
 import count from './count-items.js';
 import showlikes from './display-likes.js';
+// import displayComments from './display-comments.js';
 
 async function getData() {
   const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s');
@@ -38,6 +39,7 @@ async function getData() {
     div3.id = 'div-heart';
     div2.appendChild(div3);
 
+    // # likes
     const like = document.createElement('i');
     like.className = 'fa-solid fa-heart';
     like.id = data.meals[i].idMeal;
@@ -47,8 +49,28 @@ async function getData() {
 
     const likeCount = document.createElement('label');
     likeCount.id = `id${data.meals[i].idMeal}`;
-    likeCount.innerHTML = 'likes';
+    likeCount.innerHTML = '';
     div3.appendChild(likeCount);
+
+    // #comments
+    // const comments = document.createElement('i');
+    // comments.className = 'fa-solid fa-comment';
+    // comments.id = data.meals[i].idMeal;
+    // div3.appendChild(comments);
+
+    // displayComments(data.meals[i].idMeal);
+
+    // const commentsCount = document.createElement('label');
+    // commentsCount.id = `comment${data.meals[i].idMeal}`;
+    // commentsCount.innerHTML = '';
+    // div3.appendChild(commentsCount);
+
+    // comments.addEventListener('click', (e) => {
+    //   const { id } = e.target;
+    //   showPopupComment(id);
+    // });
+
+    // button
 
     const button = document.createElement('button');
     button.id = data.meals[i].idMeal;
