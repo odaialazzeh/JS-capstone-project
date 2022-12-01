@@ -5,6 +5,11 @@ import showPopupContacts from './module/show-popup-contacts.js';
 
 getData();
 
+const menuLogo = document.querySelector('.logo');
+menuLogo.addEventListener('click', () => {
+  getData();
+});
+
 const menuMeals = document.getElementById('meals');
 menuMeals.addEventListener('click', () => {
   getData();

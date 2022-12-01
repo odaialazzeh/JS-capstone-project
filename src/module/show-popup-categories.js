@@ -33,7 +33,7 @@ async function showPopupCategories() {
     p1.textContent = `${dataCat.strCategory}`;
     div.appendChild(p1);
 
-    img.addEventListener('click', (e) => {
+    img.addEventListener('click', () => {
       getData(dataCat.strCategory);
       cat.remove();
     });
