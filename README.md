@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://github.com/odaialazzeh/JS-capstone-project/dist)
+- [Live Demo Link](https://odaialazzeh.github.io/JS-capstone-project/dist/)
 
 <!-- GETTING STARTED -->
 
