@@ -116,6 +116,7 @@ For making changes to the project you should clone the project.
 ### Run tests
 
 If you want to work with Chrome Developer Tools, simply run the HTML document in Google Chrome and right-click the HTML element you want to inspect. Click on "Inspect" and you will have the tools to run, analyze, and even debug the code.
+There was a lot of code review, you can add your's or look for the example: (https://github.com/odaialazzeh/JS-capstone-project/pull/29)
 
 ### Deployment
 
