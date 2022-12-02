@@ -69,6 +69,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
+## 💨 Kanban board (https://github.com/odaialazzeh/JS-capstone-project/projects/1)
 
 - [Live Demo Link](https://odaialazzeh.github.io/JS-capstone-project/dist/)
 
