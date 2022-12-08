@@ -31,8 +31,16 @@
 **JS-capstone-project**  is about building own web application based on an external API. Data is preserved thanks to the external API service.
 
 # 👁‍🗨 Preview
+## Homepage:
+![image](https://raw.githubusercontent.com/odaialazzeh/JS-capstone-project/main/images/screenshot-1.png)
+<br>
+## Categories:
+![image](https://raw.githubusercontent.com/odaialazzeh/JS-capstone-project/main/images/screenshot-2.png)
+<br>
+## pop-window:
+![image](https://raw.githubusercontent.com/odaialazzeh/JS-capstone-project/main/images/screenshot-3.png)
 
-![image](https://user-images.githubusercontent.com/106581139/205302389-7d1d1950-ebdb-4541-8f9d-1ff8a5a92414.png)
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
