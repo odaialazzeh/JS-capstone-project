@@ -28,7 +28,7 @@
 
 # 📖 JS-capstone-project <a name="about-project"></a>
 
-**JS-capstone-project**  is about building own web application based on an external API. Data is preserved thanks to the external API service.
+**JS-capstone-project**  is about building a web application based on an external API. Data is preserved from the external API service.
 
 # 👁‍🗨 Preview
 ## Homepage:
