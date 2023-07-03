@@ -28,7 +28,7 @@
 
 # 📖 JS-capstone-project <a name="about-project"></a>
 
-**JS-capstone-project**  is about building a web application based on an external API. Data is preserved from the external API service.
+**JS-capstone-project**  is about building a  web application for Recipes! This platform harnesses the power of an external API, ensuring a vast collection of culinary delights at your fingertips. Our application aims to provide a seamless and user-friendly experience, enabling you to explore and discover many recipes from various cuisines. With the data preserved through the external API service.
 
 # 👁‍🗨 Preview
 ## Homepage:
